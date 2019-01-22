@@ -295,7 +295,7 @@ body {
 
 a.one:link {color:#ff0000; padding:6px;}
 a.one:visited {color:#b9b9b9;padding:6px;}
-a.one:hover {color:#ffcc00;padding:6px;}
+a.one:hover {color:#8CE97F;padding:6px;}
 
 .mapboxgl-ctrl-group {
     -webkit-filter: invert(100%);
