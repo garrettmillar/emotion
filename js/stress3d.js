@@ -32,7 +32,7 @@ map.on('load', function () {
         })
     map.addSource('CHIPS_all_pts', {
         type: 'geojson',
-        data: 'https://raw.githubusercontent.com/gcmillar/3D-Buildings-NL/master/CHIPS_all_pts'
+        data: 'https://raw.githubusercontent.com/gcmillar/stress3d/master/CHIPS_all_pts'
     });
 
     map.addSource('photos-mapillary', {
@@ -1043,4 +1043,4 @@ function getLayerStat() {
 
 
 
-var url = 'https://raw.githubusercontent.com/gcmillar/3D-Buildings-NL/master/CHIPS_all_pts';
+var url = 'https://raw.githubusercontent.com/gcmillar/stress3d/master/CHIPS_all_pts';
