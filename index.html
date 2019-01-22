@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+      <title>Cyclists' Skin Conductivity in 3D - Netherlands</title>
+      <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.js'></script>
+      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.css' rel='stylesheet' />
+      <link href='https://www.mapbox.com/base/latest/base.css' rel='stylesheet' />
+      <link rel="shortcut icon" type="image/png" href="/bike-icon-teal.png"/>
+      <link rel="shortcut icon" type="image/png" href="http://china2spain.com/wp-content/uploads/2018/06/bike-icon-teal.png"/>
+      <link href='https://unpkg.com/mapillary-js@2.15.0/dist/mapillary.min.css' rel='stylesheet' />
+      <script src='https://unpkg.com/mapillary-js@2.15.0/dist/mapillary.min.js'></script>
+      <script src="https://cdn.jsdelivr.net/npm/@turf/turf@5/turf.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.12.1/react.min.js"></script>
+      <script src="https://code.highcharts.com/highcharts.src.js"></script>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="content">
+    <div id='map'>
+    </div>
+    <!-- <nav id="menu"><h3>Toggle Cyclists</h3> <br></nav> -->
+    <!-- <div id="street-view"></div> -->
+    <!-- <div id="pano"></div> -->
+    <div id='sidebar-left'> 
+      <span class=topleft><a href="https://github.com/gcmillar/3D-Buildings-NL" title="Check me out on GitHub" alt="octocat"><img src="img/cycle-stress-logo_no_desc.png" align='middle'; width="%"></span></a></img>
+      <br><br>
+      <p class="outset"></p>
+      <!-- <div class='map-overlay top'> 
+        <div class='map-overlay-inner'>  -->
+          <nav id="menu" style="width: 100%;
+           height:100%">  <h2><b>Toggle Cyclists</b></h2>
+          </nav>
+
+<!--         </div>
+
+      </div> -->
+
+</div>
+
+<!--       <span class=topleft><a href="https://github.com/gcmillar/3D-Buildings-NL" title="Check me out on GitHub" alt="octocat">
+          <img src="img/cycle-stress-logo_improved.png" width="95%"></span></a></img> -->
+      <!-- <a><b>
+      <a href="https://github.com/gcmillar/3D-Buildings-NL" target="_blank">
+      Mapping Cyclists' Skin Conductivity in 3D </a></a></b> 
+      
+      </div>
+      <span class=topleft><a href="https://github.com/gcmillar/3D-Buildings-NL" title="Check me out on GitHub" alt="octocat">
+          <img src="img/cycle-stress-logo_background.png" width="25%"></span> -->
+    <div id='sidebar'>
+        
+        <div id='container'>
+
+        <div id='stat'></div>
+        </div>
+
+        <div id='mly'>
+
+          <span class=topleft><a><h2 top="50%" align="center" vertical-align="middle"><b>Click on a point to</b></h2></a>
+            <a><h2><b>activate street view</b></h2></a>
+
+          </span>
+
+          <!-- <h2><b>Click on a point to activate street view</b></h2> -->
+
+
+        </div>
+        <div id="close"></div>
+    </div>
+
+      <!-- <span class=topleft><img style="width:1.3em; " src= alt=alerts>  <a href="https://www.google.com/maps/place/Tilburg,+Netherlands/@51.5848961,4.9233875,11z/data=!3m1!4b1!4m5!3m4!1s0x47c69585518d5c67:0x636befab4fb5a182!8m2!3d51.5852528!4d5.056375" target="_blank">Tilburg, Netherlands </a></br></span>
+
+      <span class=topleft><img style="width:1.3em; " src=http://icon-park.com/imagefiles/location_map_pin_blue5.png alt=alerts>  <a href="https://www.google.com/maps/place/Tilburg,+Netherlands/@51.5848961,4.9233875,11z/data=!3m1!4b1!4m5!3m4!1s0x47c69585518d5c67:0x636befab4fb5a182!8m2!3d51.5852528!4d5.056375" target="_blank">Tilburg, Netherlands </a></br></span> -->
+
+      <div id='legend'>
+      <div class='session'> 
+      <h3>Skin Conductivity</h3>
+      <div class='row colors'>
+      </div>
+      <div class='row labels'>
+        <div class='label'><b>Calm</b></div>
+        <div class='label'><b>Stressed</b></div>
+      </div>
+
+      <div id='github'>
+
+        <a href="https://github.com/gcmillar/3D-Buildings-NL" title="Check me out on GitHub" alt="octocat">
+            <img src="img/GitHub_Logo_gray.png" width="4%">
+        </a>
+
+      </div>
+    </a>
+</div>
+    </div>
+
+
+
+    </div>
+
+    
+</div>
+
+<script src="js/stress3d.js"></script>
+</body>
+
+</html>
