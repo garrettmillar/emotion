@@ -293,6 +293,10 @@ body {
     /*z-index: 100;*/
 }
 
+a.one:link {color:#ff0000; padding:6px;}
+a.one:visited {color:#b9b9b9;padding:6px;}
+a.one:hover {color:#ffcc00;padding:6px;}
+
 .mapboxgl-ctrl-group {
     -webkit-filter: invert(100%);
 }
@@ -418,17 +422,20 @@ height: 100vh;
   }
 
   #menu a:hover {
-    background-color: #b1bbdb;
-    color: #797979;
+    background-color: rgba(177,187,219, 0.6);
+    color: #303030;
   }
 
   #menu a.active {
     background-color: rgba(62,87,166, 0.6);
     color: #797979;
+/*    border-color: rgba(166,62,87, 0.6);
+    border-style: ridge;*/
   }
 
   #menu a.active:hover {
-      background: rgba(62,87,166, 0.6);
+      background: rgba(177,187,219, 0.6);
+      color: #303030;
   }
 
 /* Navbar container */
