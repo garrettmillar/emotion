@@ -54,6 +54,13 @@ body {
     color:#525252;
 
   }
+  
+  a-white {
+    text-decoration: none;
+    color:#b9b9b9;
+    font-size: 11px;
+
+  }
 
   #console {
     position: absolute;
@@ -294,6 +301,7 @@ span {
   position: absolute;
   top: 10.4px;
   left: -0px;
+  width: 100%;
 }
 
 .topleft {
@@ -321,6 +329,8 @@ span {
 p {
   border-bottom:0.8px #3D3D3D;
   border-style: ridge;
+  margin-bottom: 0px;
+  padding:0px;
 }
 
 
@@ -381,7 +391,7 @@ height: 100vh;
 
 #menu {
       position: absolute;
-      top: 100px;
+      top: 60px;
       /*left: 300px;*/
       overflow: hidden;
       /*background-color: rgba(0, 0, 0, 0.25);*/
