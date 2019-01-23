@@ -367,7 +367,7 @@ height: 100vh;
     width: 30px;
     height: 30px;
     position: absolute;
-    z-index: 1;
+    z-index: 0;
     right: 350.2px;
     top: 0px;
     list-style: none;
@@ -383,8 +383,9 @@ li-c {
 
 .close__label {
   float: left;
-  width: 300;
+  width: 100%;
   font-size: 10px;
+    height: 0px;
   opacity: 0;
   padding-top: 3px;
   padding-right: 23px;
@@ -393,7 +394,7 @@ li-c {
 }
 
 #close:hover {
-  width: 300px;
+  width: 320px;
   color: white;
   line-height: 11px;
   /*width: 300px;*/
