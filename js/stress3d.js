@@ -505,7 +505,7 @@ map.on('load', function() {
 
 function getData() {
   var vals = [];
-  var layer = [];
+  var layer = "CHIPS_all_pts"
   if (!map.getLayer(layer)) return vals;
 
   var test = map.queryRenderedFeatures({
@@ -759,7 +759,7 @@ function chartInit(data) {
       zoomType: 'x',
       events: {
         selection: function(event) {
-            var layer = [];
+            var layer = "CHIPS_all_pts";
           
           if(event.resetSelection){
                map.setFilter(layer,[
@@ -1013,7 +1013,7 @@ function printLayerStat() {
 
 function getLayerStat() {
   var test = map.queryRenderedFeatures({
-    layers: ["1"] 
+    layers: ["CHIPS_all_pts"] 
   });
   var vals = [];
   test.forEach(function(f) {
