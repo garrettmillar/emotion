@@ -588,55 +588,55 @@ function chartInit(data) {
     },
     title: {
       style: {
-        color: '#747474',
+        color: '#B9B9B9',
         textTransform: 'uppercase',
         fontSize: '20px'
       }
     },
     subtitle: {
       style: {
-        color: '#747474',
+        color: '#B9B9B9',
         textTransform: 'uppercase'
       }
     },
     xAxis: {
-      gridLineColor: '#707073',
+      gridLineColor: '#B9B9B9',
       labels: {
         style: {
-          color: '#747474'
+          color: '#B9B9B9'
         }
       },
-      lineColor: '#707073',
-      minorGridLineColor: '#505053',
-      tickColor: '#707073',
+      lineColor: '#B9B9B9',
+      minorGridLineColor: '#747474',
+      tickColor: '#B9B9B9',
       title: {
         style: {
-          color: '#747474'
+          color: '#B9B9B9'
 
         }
       }
     },
     yAxis: {
-      gridLineColor: '#707073',
+      gridLineColor: '#B9B9B9',
       labels: {
         style: {
-          color: '#747474'
+          color: '#B9B9B9'
         }
       },
-      lineColor: '#707073',
-      minorGridLineColor: '#505053',
+      lineColor: '#B9B9B9',
+      minorGridLineColor: '#747474',
       tickColor: '#707073',
       tickWidth: 1,
       title: {
         style: {
-          color: '#747474'
+          color: '#B9B9B9'
         }
       }
     },
     tooltip: {
       backgroundColor: 'rgba(0, 0, 0, .55)',
       style: {
-        color: '#747474'
+        color: '#B9B9B9'
       }
     },
     plotOptions: {
@@ -682,10 +682,10 @@ function chartInit(data) {
 
     drilldown: {
       activeAxisLabelStyle: {
-        color: '#747474'
+        color: '#B9B9B9'
       },
       activeDataLabelStyle: {
-        color: '#747474'
+        color: '#B9B9B9'
       }
     },
 
@@ -764,7 +764,7 @@ function chartInit(data) {
     legendBackgroundColor: 'rgba(0, 0, 0, 0.5)',
     background2: '#505053',
     dataLabelsColor: '#B0B0B3',
-    textColor: '#747474',
+    textColor: '#B9B9B9',
     contrastTextColor: '#F0F0F3',
     maskColor: 'rgba(0,0,0,0.3)'
   };
@@ -826,13 +826,49 @@ function chartInit(data) {
           //   y2: 1
           // },
           stops: [
-          [-12361.2246720,'rgba(33, 102, 172, .55)'], 
-          [28208.5369920, 'rgba(178,24,43, .55)'] 
+          [0, Highcharts.getOptions().colors[0]],
+          [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+          ]
+          // [-12361.2246720,'rgba(33, 102, 172, .55)'], 
+          // [28208.5369920, 'rgba(178,24,43, .55)'] 
           // [0, Highcharts.getOptions().colors[0]],
           // [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
-          ]
+          // ]
         },
       },
+      //   area: {
+      //   fillColor: {
+      //     linearGradient: {
+      //       x1: 0,
+      //       y1: 0,
+      //       x2: 0,
+      //       y2: 1
+      //     },
+      //     stops: [
+      //   //   [0,'rgba(33, 102, 172, .55) : rgba(178,24,43, .55)']
+      //     // [-0.8704912, '#d6604d']
+      //     // [-0.5898474, '#4393c3'],
+      //     // [-0.2839074, '#fddbc7'],
+      //     // [0, 'rgba(146,197,222, .55)'],
+      //     // [0.3573693, '#d1e5f0'],
+      //     // [0.6403849, '#f7f7f7'],
+      //     // [2647.7223040, 'rgba(244,165,130, .55)'],
+      //     // [1, 'rgba(178,24,43, .55)'] 
+      //     [0, Highcharts.getOptions().colors[0]],
+      //     [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+      //     ]
+      //   },
+      //   marker: {
+      //     radius: 2
+      //   },
+      //   lineWidth: 3,
+      //   states: {
+      //     hover: {
+      //       lineWidth: 2
+      //     }
+      //   },
+      //   threshold: null
+      // }
     },
 
     series: [{
@@ -1028,7 +1064,7 @@ function printLayerStat() {
 
 }
 
-
+// #B9B9B9
 function getLayerStat() {
   var test = map.queryRenderedFeatures({
     layers: ["CHIPS_all_pts"] 
