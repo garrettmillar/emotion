@@ -338,7 +338,7 @@ map.on('load', function () {
         // https://a.mapillary.com/v3/images?closeto=5.0633,51.6272&client_id=QjI1NnU0aG5FZFZISE56U3R5aWN4ZzplNDVjNDc0YmYwYjJmYjQ0&usernames=gcmillar
         let closeto = "https://a.mapillary.com/v3/images?closeto=" + e.lngLat.lng + "," + e.lngLat.lat + "&client_id=QjI1NnU0aG5FZFZISE56U3R5aWN4ZzplNDVjNDc0YmYwYjJmYjQ0";
         let newpoint = turf.point([e.lngLat.lng, e.lngLat.lat])
-        console.log(newpoint)
+        // console.log(newpoint)
         map.getSource('markers').setData(newpoint
 
         );
@@ -352,7 +352,7 @@ map.on('load', function () {
             let mapillary_keys = mapillaryphotos.features[0].properties.key;
             mly.moveToKey(mapillary_keys)
 
-            console.log(e.lngLat.lng, e.lngLat.lat)
+            // console.log(e.lngLat.lng, e.lngLat.lat)
 
           });
 
@@ -435,43 +435,44 @@ map.once('style.load', function(e) {
 
 const toggleableLayerIds = ['Cyclist 1', 'Cyclist 2', 'Cyclist 3', 'Cyclist 4', 'Cyclist 5', 'Cyclist 6', 'Cyclist 7', 'Cyclist 8', 'Cyclist 9', 'Cyclist 10', 'Cyclist 11'];
 
-// var toggleableLayerIds = ['Cyclist 1', 'Cyclist 2'];
 
-// console.log(toggleableLayerIds); 
 
 for (var i = 0; i < toggleableLayerIds.length; i++) {
     var id = toggleableLayerIds[i];
-    console.log(id); 
 
     var link = document.createElement('a');
     link.href = '#';
-    link.className = 'active';
+    link.className = 'inactive';
     link.textContent = id;
 
     link.onclick = function (e) {
         var clickedLayer = this.textContent;
-        console.log(clickedLayer); 
         e.preventDefault();
         e.stopPropagation();
 
         var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
 
-        if (visibility === 'visible') {
-            map.setLayoutProperty(clickedLayer, 'visibility', 'none');
-            this.className = '';
+        if (visibility === 'none') {
+            map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+            this.className = 'active';
         } else {
             this.className = 'active';
-            map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+            map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+            this.className = 'inactive';
         }
     };
 
     var layers = document.getElementById('menu');
-    console.log(layers);
     layers.appendChild(link);
 }
 
 map.on('load', function() {
     // Insert the layer beneath any symbol layer.
+    for (var i = 0; i < toggleableLayerIds.length; i++) {
+    	var id = toggleableLayerIds[i];
+    	map.setLayoutProperty(id, 'visibility', 'none');
+    }
+    
     var layers = map.getStyle().layers;
 
     var labelLayerId;
@@ -490,7 +491,7 @@ map.on('load', function() {
         'type': 'fill-extrusion',
         'minzoom': 0,
         'paint': {
-            'fill-extrusion-color': '#c6bdff',
+            'fill-extrusion-color': '#616A95',
 
             // use an 'interpolate' expression to add a smooth transition effect to the buildings as the user zooms in
             'fill-extrusion-height': [
@@ -524,7 +525,6 @@ function getallData() {
 function getData(layerName) {
   var vals = [];
   var layer = layerName;
-  console.log(layerName);
   // if (!map.getLayer(layer)) return vals;
 
   var test = map.queryRenderedFeatures({
@@ -556,7 +556,7 @@ function chartSetData() {
 
 
 function chartInit(data) {
-  var data = data || getData() || [];
+  // var data = data || getData() || [];
 
   Highcharts.createElement('link', {
     href: 'https://fonts.googleapis.com/css?family=Unica+One',
@@ -565,7 +565,7 @@ function chartInit(data) {
   }, null, document.getElementsByTagName('head')[0]);
 
   Highcharts.theme = {
-    colors: ['rgba(31, 78, 102, .35)', '#90ee7e', '#f45b5b', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
+    colors: ['#116466', '#90ee7e', '#f45b5b', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
       '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'
     ],
     chart: {
@@ -577,8 +577,8 @@ function chartInit(data) {
           y2: 1
         },
         stops: [
-          [0, 'rgba(0, 0, 0, 0.5)'],
-          [1, 'rgba(0, 0, 0, 0.5)']
+          [0, '#282828'],
+          [1, '#282828']
         ]
       },
       style: {
