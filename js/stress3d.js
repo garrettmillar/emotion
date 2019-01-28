@@ -504,7 +504,7 @@ map.on('load', function() {
                10, 0,
                 15, ["get", "min_height"]
             ],
-            'fill-extrusion-opacity': .55
+            'fill-extrusion-opacity': .65
         }
     }, labelLayerId);
 });
