@@ -565,7 +565,7 @@ function chartInit(data) {
   }, null, document.getElementsByTagName('head')[0]);
 
   Highcharts.theme = {
-    colors: ['#116466', '#90ee7e', '#f45b5b', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
+    colors: ['#79A892', '#90ee7e', '#f45b5b', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
       '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'
     ],
     chart: {
