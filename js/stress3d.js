@@ -435,8 +435,11 @@ map.once('style.load', function(e) {
 
 var toggleableLayerIds = ['Cyclist 1', 'Cyclist 2', 'Cyclist 3', 'Cyclist 4', 'Cyclist 5', 'Cyclist 6', 'Cyclist 7', 'Cyclist 8', 'Cyclist 9', 'Cyclist 10', 'Cyclist 11'];
 
+console.log(toggleableLayerIds); 
+
 for (var i = 0; i < toggleableLayerIds.length; i++) {
     var id = toggleableLayerIds[i];
+    console.log(id); 
 
     var link = document.createElement('a');
     link.href = '#';
@@ -445,6 +448,7 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
 
     link.onclick = function (e) {
         var clickedLayer = this.textContent;
+        console.log(clickedLayer); 
         e.preventDefault();
         e.stopPropagation();
 
@@ -460,6 +464,7 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
     };
 
     var layers = document.getElementById('menu');
+    console.log(layers);
     layers.appendChild(link);
 }
 
@@ -508,9 +513,12 @@ function getData() {
   var layer = "CHIPS_all_pts"
   if (!map.getLayer(layer)) return vals;
 
+  
+
   var test = map.queryRenderedFeatures({
     layers: [layer]
-  });
+  }); 
+  console.log(test); 
 
   test.forEach(function(f) {
     vals.push([f.properties.time, f.properties.conductance_z]);
@@ -522,6 +530,7 @@ function getData() {
   })
 
   return (vals);
+  console.log(vals); 
 }
 
 
@@ -536,9 +545,12 @@ function chartSetData() {
   })
 }
 
+// console.log(data); 
+
 function chartInit(data) {
 
   data = data || getData() || [];
+  console.log(data); 
 
   Highcharts.createElement('link', {
     href: 'https://fonts.googleapis.com/css?family=Unica+One',
