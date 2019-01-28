@@ -646,7 +646,8 @@ function chartInit(data) {
         },
         marker: {
           lineColor: '#333'
-        }
+        },
+        lineWidth: 1,
       },
       boxplot: {
         fillColor: 'blue'

@@ -121,7 +121,7 @@ body {
   #sidebar{
     background: rgba(40,40,40,1);
     position: absolute;
-    padding: 40px 0px;
+    padding: 0px 0px;
     top: -2px;
     right: 0;
     bottom: 0;
@@ -133,7 +133,7 @@ body {
   #sidebar-left{
     background: rgba(40,40,40,1);
     position: absolute;
-    padding: 40px 0px;
+    padding: 0px 0px;
     top: -2px;
     left: 0;
     bottom: 0;
@@ -150,8 +150,8 @@ body {
   }
 
   #mly {
-   bottom: -320px; 
-   height:58%;
+   bottom: -340px; 
+   height:50%;
    width: 100%;
    background: rgba(40,40,40,1);
  }
