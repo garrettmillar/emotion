@@ -56,11 +56,13 @@ var map = new mapboxgl.Map({
 
 Swal.fire({
   title: 'Welcome!',
-  text: 'This application uses cyclists physiological data to see how stress and emotions can be affected by our environment. To begin, use the Toggle Cyclists menu on the left (as shown above) to start exploring their stress levels and associated bike routes. Those cyclists highlighted in yellow are those currently being displayed on the map.',
+  text: 'This application uses cyclist\'s physiological data to see how stress and emotions can be affected by our environment. To begin, use the \'Toggle Cyclists\' menu on the left (as shown above) to start exploring their stress levels and associated bike routes. The cyclists highlighted in yellow are those currently being displayed on the map.\nAnd be sure to use Street View! With this, it is easier to understand what the cyclists may have been seeing while experiencing high levels of stress.',
   imageUrl: 'img/stress_toggle.gif',
   imageWidth: 400,
   imageHeight: 200,
   imageAlt: 'how to toggle cyclists',
+  confirmButtonText:
+    '<i class="fa fa-thumbs-up"></i> Got it!',
   animation: false
 })
 
