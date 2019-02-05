@@ -11,47 +11,47 @@ var map = new mapboxgl.Map({
   // (load): "map = $event"
 });
 
-// $(document).ready(function() {	
+// $(document).ready(function() {   
 
-// 		var id = '#dialog';
-	
-// 		//Get the screen height and width
-// 		var maskHeight = $(document).height();
-// 		var maskWidth = $(window).width();
-	
-// 		//Set heigth and width to mask to fill up the whole screen
-// 		$('#mask').css({'width':maskWidth,'height':maskHeight});
-		
-// 		//transition effect		
-// 		$('#mask').fadeIn(1000);	
-// 		$('#mask').fadeTo("slow",0.8);	
-	
-// 		//Get the window height and width
-// 		var winH = $(window).height();
-// 		var winW = $(window).width();
+//      var id = '#dialog';
+    
+//      //Get the screen height and width
+//      var maskHeight = $(document).height();
+//      var maskWidth = $(window).width();
+    
+//      //Set heigth and width to mask to fill up the whole screen
+//      $('#mask').css({'width':maskWidth,'height':maskHeight});
+        
+//      //transition effect     
+//      $('#mask').fadeIn(1000);    
+//      $('#mask').fadeTo("slow",0.8);  
+    
+//      //Get the window height and width
+//      var winH = $(window).height();
+//      var winW = $(window).width();
               
-// 		//Set the popup window to center
-// 		$(id).css('top',  winH/2-$(id).height()/2);
-// 		$(id).css('left', winW/2-$(id).width()/2);
-	
-// 		//transition effect
-// 		$(id).fadeIn(2000); 	
-	
-// 	//if close button is clicked
-// 	$('.window .close').click(function (e) {
-// 		//Cancel the link behavior
-// 		e.preventDefault();
-		
-// 		$('#mask').hide();
-// 		$('.window').hide();
-// 	});		
-	
-// 	//if mask is clicked
-// 	$('#mask').click(function () {
-// 		$(this).hide();
-// 		$('.window').hide();
-// 	});		
-	
+//      //Set the popup window to center
+//      $(id).css('top',  winH/2-$(id).height()/2);
+//      $(id).css('left', winW/2-$(id).width()/2);
+    
+//      //transition effect
+//      $(id).fadeIn(2000);     
+    
+//  //if close button is clicked
+//  $('.window .close').click(function (e) {
+//      //Cancel the link behavior
+//      e.preventDefault();
+        
+//      $('#mask').hide();
+//      $('.window').hide();
+//  });     
+    
+//  //if mask is clicked
+//  $('#mask').click(function () {
+//      $(this).hide();
+//      $('.window').hide();
+//  });     
+    
 // });
 
 Swal.fire({
@@ -525,8 +525,8 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
 map.on('load', function() {
     // Insert the layer beneath any symbol layer.
     for (var i = 0; i < toggleableLayerIds.length; i++) {
-    	var id = toggleableLayerIds[i];
-    	map.setLayoutProperty(id, 'visibility', 'none');
+        var id = toggleableLayerIds[i];
+        map.setLayoutProperty(id, 'visibility', 'none');
     }
     
     var layers = map.getStyle().layers;
@@ -567,12 +567,12 @@ map.on('load', function() {
 
 
 function getallData() {
-	var dataList = [];
-	let layerName;
-	for (var i = 0; i < toggleableLayerIds.length; i++) {
-    	layerName = toggleableLayerIds[i];
-    	var data = getData(layerName);
-    	dataList.push(data);
+    var dataList = [];
+    let layerName;
+    for (var i = 0; i < toggleableLayerIds.length; i++) {
+        layerName = toggleableLayerIds[i];
+        var data = getData(layerName);
+        dataList.push(data);
     }
     return dataList;
 }

@@ -538,17 +538,21 @@ li-c {
   width: 100%;
   text-transform: uppercase;
 }
+
 .navbar a:last-child {
       border: none;
   }
+
 .navbar a:hover {
     background-color: #b1bbdb;
     color: #797979;
 }
+
 .navbar a.active {
   background-color: rgba(62,87,166, 0.6);
   color: #797979;
 }
+
 .navbar a.active:hover {
     background: rgba(177,187,219, 0.6);
 }*/
