@@ -79,7 +79,7 @@ let markerSource = {
 };
 
 map.on('load', function () {
-    let photos = "https://a.mapillary.com/v3/images?client_id=QjI1NnU0aG5FZFZISE56U3R5aWN4ZzplNDVjNDc0YmYwYjJmYjQ0&closeto=5.0633,51.6272"
+    let photos = "https://a.mapillary.com/v3/images?client_id=U05MRjZSY1otMkN1R1VPMTA4WUY1Zzo4ODc0MmI1ODRlOWIwZjdj&closeto=5.0633,51.6272"
         let mapillaryphotos = null
         fetch(photos).then(response => {
           return response.json()
@@ -392,7 +392,7 @@ map.on('load', function () {
       );
       map.on('click', function(e) {
         // https://a.mapillary.com/v3/images?closeto=5.0633,51.6272&client_id=QjI1NnU0aG5FZFZISE56U3R5aWN4ZzplNDVjNDc0YmYwYjJmYjQ0&usernames=gcmillar
-        let closeto = "https://a.mapillary.com/v3/images?closeto=" + e.lngLat.lng + "," + e.lngLat.lat + "&client_id=QjI1NnU0aG5FZFZISE56U3R5aWN4ZzplNDVjNDc0YmYwYjJmYjQ0";
+        let closeto = "https://a.mapillary.com/v3/images?closeto=" + e.lngLat.lng + "," + e.lngLat.lat + "&client_id=U05MRjZSY1otMkN1R1VPMTA4WUY1Zzo4ODc0MmI1ODRlOWIwZjdj";
         let newpoint = turf.point([e.lngLat.lng, e.lngLat.lat])
         // console.log(newpoint)
         map.getSource('markers').setData(newpoint
