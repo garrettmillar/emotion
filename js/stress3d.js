@@ -79,7 +79,7 @@ let markerSource = {
 };
 
 map.on('load', function () {
-    let photos = "https://a.mapillary.com/v3/images?client_id=U05MRjZSY1otMkN1R1VPMTA4WUY1Zzo4ODc0MmI1ODRlOWIwZjdj&closeto=5.0633,51.6272"
+    let photos = "https://a.mapillary.com/v3/images?client_id=U05MRjZSY1otMkN1R1VPMTA4WUY1Zzo4ZmM5NWVjZjgwNDcxZDI0&closeto=5.0633,51.6272"
         let mapillaryphotos = null
         fetch(photos).then(response => {
           return response.json()
@@ -102,7 +102,7 @@ map.on('load', function () {
         type: "symbol",
         source: "markers",
         layout: {
-          "icon-image": "car-15"
+          "icon-image": "bicycle-15"
         }  });
 
     if (window.location.search.indexOf('embed') !== -1) map.scrollZoom.disable();
@@ -392,7 +392,7 @@ map.on('load', function () {
       );
       map.on('click', function(e) {
         // https://a.mapillary.com/v3/images?closeto=5.0633,51.6272&client_id=QjI1NnU0aG5FZFZISE56U3R5aWN4ZzplNDVjNDc0YmYwYjJmYjQ0&usernames=gcmillar
-        let closeto = "https://a.mapillary.com/v3/images?closeto=" + e.lngLat.lng + "," + e.lngLat.lat + "&client_id=U05MRjZSY1otMkN1R1VPMTA4WUY1Zzo4ODc0MmI1ODRlOWIwZjdj";
+        let closeto = "https://a.mapillary.com/v3/images?closeto=" + e.lngLat.lng + "," + e.lngLat.lat + "&client_id=U05MRjZSY1otMkN1R1VPMTA4WUY1Zzo4ZmM5NWVjZjgwNDcxZDI0";
         let newpoint = turf.point([e.lngLat.lng, e.lngLat.lat])
         // console.log(newpoint)
         map.getSource('markers').setData(newpoint
@@ -452,10 +452,10 @@ map.once('style.load', function(e) {
             .setLngLat(map.unproject(e.point))
             .setHTML('<h3>Cyclist Information</h3>' +
                 '<ul>' +
-                '<li>Skin Conductance: <b>' + feature.properties.conductance_z + '</b></li>' +
-                '<li>Speed: <b>' + feature.properties.speed2 + '</b></li>' +
-                '<li>Elevation (m): <b>' + feature.properties.altitude + '</b></li>' +
-                '<li>Distance Travelled: <b>' + feature.properties.distance + '</b></li>' +
+                '<li>Skin Conductance: <b>' + feature.properties.conductance_z.toFixed(2) + '</b></li>' +
+                '<li>Speed: <b>' + feature.properties.speed2.toFixed(2) + '</b></li>' +
+                '<li>Elevation (m): <b>' + feature.properties.altitude.toFixed(2) + '</b></li>' +
+                '<li>Distance Travelled: <b>' + feature.properties.distance.toFixed(2) + '</b></li>' +
                 '<li>Cyclist: <b>' + feature.properties.participant + '</b></li>' +
                 '</ul>')
             .addTo(map);

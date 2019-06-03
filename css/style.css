@@ -324,8 +324,8 @@ body {
     /*z-index: 100;*/
 }
 
-a.one:link {color:#ff0000; padding:6px;}
-a.one:visited {color:#b9b9b9;padding:6px;}
+a.one:link {color:##B9B9B9; padding:6px;}
+a.one:visited {color:#BAE7B8;padding:6px;}
 a.one:hover {color:#8CE97F;padding:6px;}
 
 .mapboxgl-ctrl-group {
